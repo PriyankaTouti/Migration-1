@@ -1,0 +1,43 @@
+labels.TraceId
+93c81de681b0838d20b23a267ba8f038
+
+=====================================================================
+
+labels.{OriginalFormat} : 
+
+DNS: businessnext-app-669dcb477d-nvl5l ApplicationId: E2C1C5B9-BCCE-4B2C-95E5-62FCBF9562AB ComponentId: 81B1F48D-97E7-4171-A4B5-DE2B8889FA87 ComponentName: AutoFlow Tenant Id: 985 LogId: 32d1e603-27e9-4e6c-9143-57c3e5989f02 Message: I: 38788 > A: event_xor > L:XOR > M: FlowInstance.Run > O: Exception > Q: [] > P: [] > R:Error > RM:Unable to execute event_xor activity. Message: Transaction (Process ID 135) was deadlocked on lock | communication buffer resources with another process and has been chosen as the deadlock victim. Rerun the transaction. StackTrace:    at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateOb
+   
+===========================================================================
+
+
+Error : 
+
+DNS: businessnext-app-669dcb477d-nvl5l ApplicationId: E2C1C5B9-BCCE-4B2C-95E5-62FCBF9562AB ComponentId: 81B1F48D-97E7-4171-A4B5-DE2B8889FA87 ComponentName: AutoFlow Tenant Id: 985 LogId: 32d1e603-27e9-4e6c-9143-57c3e5989f02 Message: I: 38788 > A: event_xor > L:XOR > M: FlowInstance.Run > O: Exception > Q: [] > P: [] > R:Error > RM:Unable to execute event_xor activity. Message: Transaction (Process ID 135) was deadlocked on lock | communication buffer resources with another process and has been chosen as the deadlock victim. Rerun the transaction. StackTrace:    at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Acidaes.Data.DbHelper.ExecuteNonQuery(DbConnection connection, CommandType commandType, String commandText, DbParameter[] commandParameters)
+   at Acidaes.Data.DbHelper.ExecuteNonQuery(String connectionString, CommandType commandType, String commandText, DbParameter[] commandParameters)
+   at Acidaes.CRMnext.DAL.ScreenFlow.CreateBookmark(FlowTraceDescription flowTrace, String previousBookmarkId, Int32 isPreviousDataActivity, Int32 isActualBookmark, Int32 isSingleton, Int32 isCurrentDataActivity)
+   at Acidaes.CRMnext.BLL.ScreenFlow.CreateBookmark(FlowTraceDescription flowTrace, String previousBookmarkId, Int32 isPreviousDataActivity, Int32 isActualBookmark, Int32 isSingleton, Int32 isCurrentDataActivity)
+   at Acidaes.CRMnext.FlowEngine.Core.FlowInstance.WriteTrace(ExecutionContext context, FlowAction action, ExecutionStatus status, String errorMessage, Boolean isErrorMode, FlowAction previousBookmark, Boolean isResume)
+   at Acidaes.CRMnext.FlowEngine.Core.FlowInstance.OnActivityComplete(ExecutionContext context, ExecutionResult executionResult, FlowAction& action, NativeActivity activity, Boolean& breakLoop, Boolean& continueLoop, FlowAction& previousBookmark, Boolean& isEndAfterWait) [Transaction (Process ID 135) was deadlocked on lock | communication buffer resources with another process and has been chosen as the deadlock victim. Rerun the transaction.TraceNumber: 0 and StackTrace is :    at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Acidaes.Data.DbHelper.ExecuteNonQuery(DbConnection connection, CommandType commandType, String commandText, DbParameter[] commandParameters)
+   at Acidaes.Data.DbHelper.ExecuteNonQuery(String connectionString, CommandType commandType, String commandText, DbParameter[] commandParameters)
+   at Acidaes.CRMnext.DAL.ScreenFlow.CreateBookmark(FlowTraceDescription flowTrace, String previousBookmarkId, Int32 isPreviousDataActivity, Int32 isActualBookmark, Int32 isSingleton, Int32 isCurrentDataActivity)
+   at Acidaes.CRMnext.BLL.ScreenFlow.CreateBookmark(FlowTraceDescription flowTrace, String previousBookmarkId, Int32 isPreviousDataActivity, Int32 isActualBookmark, Int32 isSingleton, Int32 isCurrentDataActivity)
+   at Acidaes.CRMnext.FlowEngine.Core.FlowInstance.WriteTrace(ExecutionContext context, FlowAction action, ExecutionStatus status, String errorMessage, Boolean isErrorMode, FlowAction previousBookmark, Boolean isResume)
+   at Acidaes.CRMnext.FlowEngine.Core.FlowInstance.OnActivityComplete(ExecutionContext context, ExecutionResult executionResult, FlowAction& action, NativeActivity activity, Boolean& breakLoop, Boolean& continueLoop, FlowAction& previousBookmark, Boolean& isEndAfterWait). ] > F: 4110 > V: 1.0 > UID: 32d1e603-27e9-4e6c-9143-57c3e5989f02
