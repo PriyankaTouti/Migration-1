@@ -1,0 +1,24 @@
+ 
+Select instanceid,flowid,version,* from flow.flowobject where objectid = 00124709;-- (Mention FA ID inside ObjectID)
+select t.InstanceId, s.Type, s.Label, t.TraceId, s.LaneId, s.StepId, s.UniqueId, t.Status, t.StepStartedOn, t.BookmarkedOn, t.StepCompletedOn, t.ErrorMessage, t.Bookmark, t.Data
+from flow.ScreenFlowTrace t
+inner join flow.flowsteps s
+on s.UniqueId = t.StepId
+where s.SubscriberId = 985 and s.FlowId = 4110 and s.Version = '1.0' and t.InstanceId =44077 order by TraceId desc
+ 
+select * into flowtrace_bkg from flow.ScreenFlowTrace where InstanceId = 44077 order by TraceId desc
+ 
+--delete from flow.ScreenFlowtrace where TraceId in (778032,778033,778034,778036)
+ 
+select * from flow.FlowStageTrace where InstanceId = 44077 order by ExecutionId desc
+ 
+--delete from flow.FlowStageTrace where ExecutionId = 97061
+ 
+select * from flow.FlowStateTrace where InstanceId = 44077 order by TraceId desc
+ 
+select * from flow.ScreenFlowInstance where InstanceId = 44077
+ 
+select * from flow.FlowSteps where FlowId = 4110 and UniqueId = 'A_4015c1c6-0313-cea1-d45d-be1c39c13454'
+
+
+{"data":{"parameters":{"RefererUrl":"","IsStepAddedUsingAddMore":"False","JourneyId":"-1","IsFlowSwitch":"False","ParentInstanceId":"-1","ParentFlowType":"-1","IsDedupeActivityResumed":"False","InstanceId":"26427","BaseRelatedToId":"-1","BaseRelatedToType":"-1","UpdateSourceInfo":"False","AddJoint":"False","CurrentStep":"0","IsFlowIntrrupted":"False","IsTemporaryVisited":"False","ExecutedDedupeActivities":"","IsCloseOrAbandon":"False","IsStateSetInternally":"False","IsMarkedForTransition":"False","StateId":"A_be4a3671-aeb7-55c8-5b6c-99231601ed02","requestedState":"100006","InitialStateUniqueId":"A_be4a3671-aeb7-55c8-5b6c-99231601ed02","previousOutMessage":"out message","TransactionOpen":"False","PublishSequence":"10","IsPartialSave":"False","TransactionInProgress":"False","CurrentState":"100006","CurrentStage":"A_10e9ba5d-11de-8d4e-6df4-a2d5cfb592a3","OutMessage":"out message","CurrentStateUniqueId":"A_be4a3671-aeb7-55c8-5b6c-99231601ed02","lowProbability":"0","highProbability":"100"},"variables":{"StateActivity":"Acidaes.CRMnext.FlowEngine.Activities.StateActivity"},"children":null}}
